@@ -1,23 +1,13 @@
-#include<stdio.h>
-#include <limits.h>
-
+#include <stdio.h>
 int main() {
-    int arr[] = {12, 35, 1, 10, 34, 1};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int first = INT_MIN, second = INT_MIN;
 
-    for (int i = 0; i < n; i++) {
-        if (arr[i] > first) {
-            second = first;
-            first = arr[i];
-        } else if (arr[i] > second && arr[i] != first) {
-            second = arr[i];
-        }
-    }
-
-    if (second == INT_MIN) printf("No second largest element.\n");
-    else printf("Second largest: %d\n", second);
-
-    return 0;
+int arr[8]={87,98,65,45,3,2,76,75};
+for (int i = 0; i <8; i++) {
+printf("%d", arr[i]);
+if(arr[i] == 45) {
+printf("found at index %d", i);
+break;
 }
-
+}
+return 0;
+}
