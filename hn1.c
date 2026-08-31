@@ -1,13 +1,36 @@
 #include <stdio.h>
-int main() {
+#include <stdlib.h>
 
-int arr[8]={87,98,65,45,3,2,76,75};
-for (int i = 0; i <8; i++) {
-printf("%d", arr[i]);
-if(arr[i] == 45) {
-printf("found at index %d", i);
-break;
+struct Node {
+    int data;
+    struct Node *next;
+};
+
+int main() {
+    struct Node *head = NULL, *newNode, *temp;
+    int n, i;
+
+    printf("Enter number of nodes: ");
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++) {
+        newNode = malloc(sizeof(struct Node));
+
+        printf("Enter data: ");
+        scanf("%d", &newNode->data);
+
+        newNode->next = NULL;
+
+        if(head == NULL)
+            head = newNode;
+        else
+            temp->next = newNode;
+
+        temp = newNode;
+    }
+
+    printf("List created successfully.");
+
+    return 0;
 }
-}
-return 0;
-}
+
